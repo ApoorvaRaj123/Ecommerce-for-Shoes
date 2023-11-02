@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "roboto flex";
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+#firstPage{
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+nav{
+    /* background-color: red; */
+    padding: 1vw;
+}
+#navtop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#navtop #logo img{
+    width: 5vw;
+}
+#navtop #search{
+    background-color: #f4f4f4;
+    padding: .3vw;
+    border-radius: 10px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#navtop #search .input{
+    border: none;
+    padding: .4vw;
+    border-radius: 7px;
+}
+#navtop #search img{
+    height: inherit;
+    width: 1vw;
+}
+#navtop .limitedoffer{
+    font-size: x-large;
+    text-decoration: underline red;
+}
+
+
+
+/* NAVIGATION BOTTOM */
+
+#navbottom{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2vw;
+}
+#navbottom h2{
+    font-size: x-large;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    -webkit-text-stroke: 1px #000;
+    color: transparent;
+}
+#navbottom h2:hover{
+    color: #000;
+    cursor: pointer;
+}
+
+#shoedisplay{
+    /* width: 100%; */
+    /* background-color: cornflowerblue; */
+    background: url("./img/shoeBackground.avif");
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+    /* padding: 0vw 4vw; */
+    height: 74%;
+    overflow: hidden;
+    
+}
+#shoedisplay .shoes{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#shoedisplay .shoes .shoeimg{
+    display: flex;
+    gap: 70vw;
+    position: absolute;
+    width: 30vw;
+    right: 1vw;
+    z-index: 99;
+    top: 10%;
+    transition: all 0.3s ease-in-out;
+}
+
+#shoedisplay .shoes .shoe{
+    /* position: absolute; */
+    /* right: 1vw; */
+    width: 30vw;
+    transform: scaleX(-1);
+    /* transform: translateX(-100vw); */
+    z-index: 99;
+}
+
+#shoedisplay .shoes .shoebg{
+    position: absolute;
+    background-color: yellowgreen;
+    opacity: 0.6;
+    border-radius: 50%;
+    height: 30vw;
+    width: 30vw;
+    right: 5vw;
+    top: 10%;
+}
+
+/* Pricing ,Name and BUTTON */
+
+#shoedisplay .shoes .price{
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    font-size: 3vw;
+    color: #f4f4f4;
+    opacity: 0.7;
+}
+#shoedisplay .shoes .name{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-size: 3vw;
+    color: #f4f4f4;
+    opacity: 0.7;
+}
+#shoedisplay .shoes button{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    font-size: 2vw;
+    padding: 1vw;
+    border: 1px solid #888;
+    border-radius: 20px;
+    color: #000;
+    opacity: 0.7;
+    cursor: pointer;
+}
+#shoedisplay .shoes button:hover{
+    color: brown;
+    background-color: #aba9a9;
+}
+/* SECOND PAGE STARTS */
+
+#secondpage{
+    /* height: 100vh; */
+    width: 100vw;
+    padding-bottom: 8vw;
+}
+#features{
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 4vw;
+}
+
+#features .s{
+    width: 8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 10px;
+}
+#features .s img{
+    width: 10vw;
+}
+#features .s  h4{
+    font-size: large;
+    width: max-content;
+}
+#features .s  p{
+    width: 10vw;
+}
+
+
+/* Third Part or Page */
+
+
+#product{
+    background: url("./img/shoeBackground.avif");
+    height: 100vh;
+    position: relative;
+    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
+}
+
+#product .productImage{
+    width: 50%;
+}
+.productDetails{
+    position: absolute;
+    right: 0;
+    top: 10%;
+    width: 40%;
+    padding: 50px;
+}
+.productName{
+    font-size: 6.5vw;
+    font-weight: 600;
+    padding: 0.5vw 0vw;
+    margin-bottom: 2vw;
+}
+.productPrice{
+    font-size: 3vw;
+    font-weight: 500;
+    padding: 0.5vw 0vw;
+}
+.productDesc{
+    font-size: 1.3vw;
+    padding: 2vw 0vw;
+}
+.colors{
+    display: flex;
+    gap: 10px;
+}
+.color{
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+    background-color: #000;
+    margin-bottom: 2vw;
+    cursor: pointer;
+}
+.color:last-child{
+    background-color: cornflowerblue;
+}
+.sizes{
+    display: flex;
+    gap: 1vw;
+}
+.size{
+    border: 1px solid black;
+    padding: .3vw 1vw;
+    font-size: 2vw;
+    cursor: pointer;
+}
+.size:hover{
+    color: #fff;
+    background-color: #000;
+}
+.productButton{
+    margin-top: 4vw;
+    padding: .6vw 4vw;
+    font-size: 2.2vw;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    opacity: 0.8;
+    cursor:pointer;
+}
+.productButton:hover{
+    color: yellowgreen;
+    background-color: #000;
+}
