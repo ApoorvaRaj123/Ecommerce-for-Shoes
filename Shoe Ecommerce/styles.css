@@ -268,3 +268,48 @@ nav{
     color: yellowgreen;
     background-color: #000;
 }
+
+
+/* PAYMENT SECTION */
+
+
+.payment{
+    height: 600px;
+    width: 600px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: -2px 4px 400px 200px rgba(63,60,60,0.8);
+-webkit-box-shadow: -2px 4px 400px 200px rgba(63,60,60,0.8);
+-moz-box-shadow: -2px 4px 400px 200px rgba(63,60,60,0.8);
+}
+
+
+.payTitle{
+    font-size: 20px;
+    color: lightgray;
+}
+
+label{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.paymentInput{
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.paymentInput::placeholder{
+    color: #aba9a9;
+}
