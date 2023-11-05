@@ -127,3 +127,21 @@ menuItem.forEach(function(items, index){
         })
     })
 })
+
+
+//Changing images of Product when Colors are clicked
+currentProductColors.forEach((color, index) => {
+    color.addEventListener("click", function () {
+        currentProductImg.src = currentProduct.colors[index].img
+    })
+})
+currentProductSizes.forEach(function(size){
+    size.addEventListener("click",function(){
+        currentProductSizes.forEach(function(size){
+            size.style.backgroundColor = "transparent"
+            size.style.color = "white"
+        })
+        size.style.color = "yellow"
+        size.style.backgroundColor = "red"
+    })
+})
