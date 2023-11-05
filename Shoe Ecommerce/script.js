@@ -87,10 +87,43 @@ const products = [
 ]
 
 
+// Selecting Elements from 1st PAGE
+const shoeDisplayName = document.querySelector(".shoes .name")
+const ShoePrice = document.querySelector(".shoes .price")
+const ShoeBackground = document.querySelector(".shoes .shoebg")
+
+//Selecting the default Product
+let currentProduct = products[0]
+
+// Selecting Elements from products PAGE
+const currentProductImg = document.querySelector(".productImage") 
+const currentProductName = document.querySelector(".productName")
+const currentProductPrice = document.querySelector(".productPrice")
+const currentProductColors = document.querySelectorAll(".color")
+const currentProductSizes = document.querySelectorAll(".sizes")
 
 
 menuItem.forEach(function(items, index){
     items.addEventListener("click",function(){
         Slider.style.transform = `translateX(${-100 * index}vw)`
+
+        //Changing Images in Products Section
+        currentProduct = products[index]
+
+        currentProductImg.src = currentProduct.colors[0].img
+
+        //Changing Name of the Product
+        shoeDisplayName.textContent = currentProduct.name
+        currentProductName.textContent = currentProduct.name
+
+        //Changing price of the Product
+        ShoePrice.textContent = "$" + currentProduct.price
+        currentProductPrice.textContent = "$" + currentProduct.price
+
+        //Changing Colors in Product
+        ShoeBackground.style.backgroundColor = currentProduct.bgcolor
+        currentProductColors.forEach(function(color,index){
+            color.style.backgroundColor = currentProduct.colors[index].code
+        })
     })
 })
