@@ -10,6 +10,7 @@ html, body{
     width: 100%;
     background-color: #f4f4f4;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 #firstPage{
@@ -114,8 +115,8 @@ nav{
 
 #shoedisplay .shoes .shoebg{
     position: absolute;
-    background-color: yellowgreen;
-    opacity: 0.6;
+    background-color: rgb(111, 179, 202);
+    opacity: 0.7;
     border-radius: 50%;
     height: 30vw;
     width: 30vw;
@@ -201,7 +202,8 @@ nav{
 }
 
 #product .productImage{
-    width: 50%;
+    width: 47.7%;
+    scale: .95;
 }
 .productDetails{
     position: absolute;
@@ -209,6 +211,8 @@ nav{
     top: 10%;
     width: 40%;
     padding: 50px;
+    color: #f4f4f4;
+    opacity: 0.9;
 }
 .productName{
     font-size: 6.5vw;
@@ -245,7 +249,7 @@ nav{
     gap: 1vw;
 }
 .size{
-    border: 1px solid black;
+    border: 2px solid #f4f4f4   ;
     padding: .3vw 1vw;
     font-size: 2vw;
     cursor: pointer;
@@ -269,7 +273,6 @@ nav{
     background-color: #000;
 }
 
-
 /* PAYMENT SECTION */
 
 
@@ -285,6 +288,7 @@ nav{
     margin: auto;
     padding: 10px 50px;
     display: flex;
+    display: none;
     flex-direction: column;
     border-radius: 10px;
     box-shadow: -2px 4px 400px 200px rgba(63,60,60,0.8);
@@ -298,9 +302,13 @@ nav{
     color: lightgray;
 }
 
+.cardIcons .visa{
+    margin-right: 1vw;
+}
+
 label{
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 100;
 }
 
 .paymentInput{
@@ -312,4 +320,118 @@ label{
 
 .paymentInput::placeholder{
     color: #aba9a9;
+}
+
+.cardh1{
+    font-size: 1.5vw;
+    color: #aba9a9;
+    padding: 0.7vw 0;
+}
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3vw;
+    padding-top: 2vw;
+}
+
+.payButton{
+    width: 80%;
+    height: 4vw;
+    margin-left: 10%;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 1.6vw;
+}
+
+.payButton:hover{
+    background-color: rgb(141, 202, 137);
+    cursor: pointer;
+}
+
+.close{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: #848383;
+    color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    right: 2%;
+}
+.close:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+footer{
+    display: flex;
+}
+
+
+.footerLeft{
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.fMenuTitle{
+    font-size: 1.4vw;
+}
+
+.fMenuList{
+    padding: 0;
+    color: #888;
+    list-style: none;
+}
+
+.fListItem{
+    margin-bottom: 1vw;
+    cursor: pointer;
+}
+
+.footerRight{
+    flex: 3;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fInput{
+    padding: 0.5vw;
+    border-radius: 5px;
+    border: 1px solid #888;
+}
+
+.fButton{
+    padding: 0.5vw;
+    color: #ffffff;
+    background-color: #323030;
+    border: none;
+    border-radius: 5px;
+}
+
+.fIcons{
+    display: flex;
+    margin-top: 5px;
+}
+
+.fIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.copyright{
+    font-weight: 200;
+    font-size: 1vw;
 }
